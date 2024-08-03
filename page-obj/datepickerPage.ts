@@ -37,7 +37,7 @@ export class DatepickerPage extends HelperBase{
     await expect(calendarInputField).toHaveValue(dateToAssert);
   }
 
-  // TODO *********************************************************************************
+  //  *********************************************************************************
 
   async selectCommonDatePickerDateFromToday2(numberOfDaysFromToday: number) {
     const calendarInputField = this.page.getByPlaceholder("Form Picker");
