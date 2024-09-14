@@ -41,7 +41,7 @@ test("parentElements", async ({ page }) => {
   
     await page
     .locator("nb-card")
-    .filter({ has: page.locator(".nb-checkbox") })
+    .filter({ has: page.locator("nb-checkbox") })
     .filter({ hasText: "Sign in" })
     .getByRole("textbox", { name: "Email" })
     .click();
