@@ -44,31 +44,40 @@ test.describe("listsAndDropdowns", () => {
 
 
 
-// const allOfThem = page.locator('nb-option-list nb-option');
-// await expect(allOfThem).toHaveText(['Light', 'Dark', 'Cosmic', 'Corporate']);
+// Конечно, вот объяснение кода на русском под каждой строчкой:
 
-// const options = await allOfThem.allTextContents();
-// options.forEach(async (option, index) => {
-// if (option === 'Corporate') {
-// await allOfThem.nth(index).click();
+// test("test", async ({ page }) => { 
+// Описываем тест с именем "test" и делаем его асинхронным, передавая объект page
+
+// const res = page.locator("ngx-header nb-select");
+// Находим элемент с селектором "ngx-header nb-select" и сохраняем его в переменную res
+
+// await res.click();
+// Ожидаем, пока элемент res будет нажат
+
+// const list = page.getByRole("list").locator("nb-option");
+// Находим элемент списка с ролью "list" и внутри него элементы с селектором "nb-option"
+
+// const list2 = page.locator("nb-option-list nb-option");
+// Находим элементы с селектором "nb-option-list nb-option" и сохраняем их в переменную list2
+
+// await expect(list2).toHaveText(["Light", "Dark", "Cosmic", "Corporate"]);
+// Ожидаем, что элементы list2 будут содержать текст "Light", "Dark", "Cosmic", "Corporate"
+
+// const options = await list2.allTextContents();
+// Получаем все текстовые содержимое элементов list2 и сохраняем их в переменную options
+
+// await Promise.all(
+// options.map(async (option, index) => {
+// Используем метод map для создания массива промисов, которые будут выполнены параллельно
+
+// if (option.trim() === "Dark") {
+// Если текст элемента равен "Dark" (с удалением пробелов в начале и конце)
+
+// await list2.nth(index).click();
+// Ожидаем, пока будет нажат элемент с индексом index в list2
 // }
+// })
+// );
+// Ожидаем выполнения всех промисов, созданных в map
 // });
-
-// Конечно! Давайте разберем эту строку:
-
-// const options = await allOfThem.allTextContents();
-
-// •  const options: Создает константу options, которая
-//  будет хранить результат выполнения следующей команды.
-
-// •  await: Ожидает завершения асинхронной операции перед тем, 
-// как продолжить выполнение кода. Это необходимо, 
-// потому что allTextContents() возвращает промис.
-
-// •  allOfThem.allTextContents(): Этот метод возвращает массив 
-// всех текстовых содержимых элементов, найденных локатором allOfThem.
-
-// В итоге, options будет массивом строк, каждая из которых
-//  представляет текст одного из элементов, найденных локатором allOfThem.
-
-// Если у вас есть еще вопросы или нужно что-то уточнить, дайте знать!
