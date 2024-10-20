@@ -4,22 +4,36 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
+test("test", async ({ page }) => {
+  await page.getByText("Forms").click();
+  await page.getByText("Datepicker").click();
 
-test.describe("testMain",()=>{
-   
-         test("test", async ({ page }) => {
-          await page.getByText("Modal & Overlays").click()
-          await page.getByText("Tooltip").click()
+  const calendarInputField = page.getByPlaceholder("Form Picker")
+  await calendarInputField.click()
 
-          const res = page.locator('nb-card',{hasText:'Tooltip Placements'})
-          // await res.getByRole('button',{name:'Top'}).hover()
-          await res.getByRole("button", { name: "Top" }).hover();
+  let date = new Date()
+  date.setDate(date.getDate()+29)
+  const expectedDate = date.getDate().toString()
+  const expectedMonthShot = date.toLocaleDateString('En-US',{month:'short'})
+  const expectedMonthLong = date.toLocaleDateString('En-US',{month:'long'})
+  const expectedYear = date.getFullYear()
+  const dateToAssert = `${expectedMonthShot} ${expectedDate}, ${expectedYear}`
 
-          const tooltip = await page.locator('nb-tooltip').textContent()
-          expect (tooltip).toEqual('This is a tooltip')
-          });
-       
+  let calendarMonthAndYear = await page.locator('nb-calendar-view-mode').textContent()
+  const expectedMonthAndYear = `${expectedMonthLong} ${expectedYear}`
 
-})
+  while(!calendarMonthAndYear.includes(expectedMonthAndYear)){
+    await page.locator('nb-calendar-pageable-navigation [data-name="chevron-right"]').click()
+    calendarMonthAndYear = await page.locator('nb-calendar-view-mode').textContent()
+  }
+
+   await page
+      .locator('[class="day-cell ng-star-inserted"]')
+      .getByText(expectedDate, { exact: true })
+      .click();
+    await expect(calendarInputField).toHaveValue(dateToAssert)
 
 
+
+ 
+});
