@@ -17,7 +17,7 @@ test.describe("Form Layouts page", () => {
     await usingTheGridEmailInput.fill("test@test.com");
     await usingTheGridEmailInput.clear();
     await usingTheGridEmailInput.pressSequentially("test2@test.com", {
-      delay: 500,
+      delay: 5,
     });
 
     //generic assertion
