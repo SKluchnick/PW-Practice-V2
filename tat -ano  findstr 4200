@@ -1,0 +1,287 @@
+[33mcommit ba831418e2c9409782d9aaec3cd90bbce1dd12c3[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Tue Nov 26 01:29:20 2024 +0200
+
+    initial commit
+
+[33mcommit 27148010cb5090da8b353f45bf8674209a944950[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Tue Nov 26 01:24:20 2024 +0200
+
+    nitial commit
+
+[33mcommit cd601bcaaf1c6860944e63ba16f5a8e4cfb2d32b[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sun Oct 20 15:02:22 2024 +0300
+
+    initial commit
+
+[33mcommit c31655290fb66f96bf260c658bc6839c5047d465[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sun Sep 22 00:44:55 2024 +0300
+
+    initial commit
+
+[33mcommit 7ebb0e4472d7b1792a62153b679a2f013b32b9bf[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Fri Sep 20 03:05:11 2024 +0300
+
+    initial commit
+
+[33mcommit 9b93bd09c20df680ff66f304c4e1ce20a6f9ed57[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Fri Sep 20 02:29:26 2024 +0300
+
+    initial commit
+
+[33mcommit afd4f0df97cd49da43acd75d05faead2867a5dcd[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sat Sep 14 22:37:23 2024 +0300
+
+    initial commit
+
+[33mcommit e73831a114e5f6a27caac1acdde377448d4cbc58[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sun Aug 4 19:44:11 2024 +0300
+
+    initial commit
+
+[33mcommit 73011d1e0b27bf3f0abbfc7b1ef7a054d88d19ff[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sun Aug 4 01:55:42 2024 +0300
+
+    initial commit
+
+[33mcommit 198de4c3048daf3cf169ec0d7e051864185f1e17[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sun Aug 4 01:45:49 2024 +0300
+
+    initial commit
+
+[33mcommit e7db5cbfc612d83abdd1fb9ef726872ee4cc207c[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Sun Aug 4 01:23:28 2024 +0300
+
+    initial commit
+
+[33mcommit 579c6b046c174651d42cc664bf53316cbb2685da[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Tue May 7 23:28:22 2024 +0300
+
+    initial commit
+
+[33mcommit 65843263bccb613430e6033510841496c0656ae6[m
+Author: SergeyGitAccount <l_w_d@i.ua>
+Date:   Mon May 6 23:23:15 2024 +0300
+
+    Initiated the project
+
+[33mcommit 8d3955f4e9e4e35140acc336886f892f959170a9[m
+Merge: c85365a a923eb1
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Fri May 5 17:49:32 2023 -0500
+
+    Merge pull request #1 from bondar-artem/fixGoogleScript
+    
+    Fix google script
+
+[33mcommit a923eb1bb8761eaf281b904dd7c1ca479353715c[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Fri May 5 17:48:49 2023 -0500
+
+    removed not needed scripts
+
+[33mcommit db076ad67fbfdfbecf62ab8b1f6f1c814eb2b194[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Fri May 5 17:47:36 2023 -0500
+
+    url updated
+
+[33mcommit 7924a25d80a5b7714ba13811eced073be23c8928[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Fri May 5 17:40:33 2023 -0500
+
+    eslint removed
+
+[33mcommit 46a0e39ee9bb17289f05455e0b5102f0de88d2c0[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Fri May 5 17:31:02 2023 -0500
+
+    husky removed
+
+[33mcommit a3b5f562eef509f7c7f1d72ef98fd78370f02efd[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Fri May 5 17:27:35 2023 -0500
+
+    fixed google dependency
+
+[33mcommit c85365a8a405dfcbae9c9c5793854cfd21087ef0[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 20:22:14 2023 -0500
+
+    plugin added
+
+[33mcommit 9b9eb6bef47770e99f7f4b80a8275e84d5f257bc[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 20:18:58 2023 -0500
+
+    added missing parser
+
+[33mcommit 21748feb70b4aa82d03d841210b20c7af571f56d[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 20:02:17 2023 -0500
+
+    final cleanup
+
+[33mcommit b360d1b12d803a79551b6bd9291f4c991eef01e6[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 19:26:25 2023 -0500
+
+    other modules deleted
+
+[33mcommit 2e229508ba485d957709ecfc5596c81944f3ce47[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 18:20:24 2023 -0500
+
+    removed tiny mice
+
+[33mcommit f903fe66368c07af2909e40b4043c21e5851dd2e[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 18:05:25 2023 -0500
+
+    deleted not needed dependencies
+
+[33mcommit 37baa734399234a7cabbd5a201312eec9467ea4e[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 17:44:09 2023 -0500
+
+    deleted two other pages
+
+[33mcommit 7337315ed46ad3933b00cbd58634791f9108a1f3[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 17:32:49 2023 -0500
+
+    deleted not needed stuff
+
+[33mcommit 299cfe65142396d15abebfaacdcf4559d290aff8[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 17:07:02 2023 -0500
+
+    removed
+
+[33mcommit 11e4227d58c0f7c29ce2fca75daac5ece0d6507e[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 17:04:30 2023 -0500
+
+    404
+
+[33mcommit c266c022e9599c58ef13d516ba4e4c2c81bb0fad[m
+Author: Artem Bondar <artem.bondar@gmail.com>
+Date:   Thu Apr 27 17:01:43 2023 -0500
+
+    dashboard removed
+
+[33mcommit 6363d5171d3faaef66485db1fec244b5b6b0feee[m
+Author: Denis Strigo <denis2295@gmail.com>
+Date:   Tue Mar 7 19:41:22 2023 +0100
+
+    release: 10.0.0 (#5975)
+
+[33mcommit b1a9a682b8a05a1bf2ac0553bd2cf12f52052d2c[m
+Author: Denis Strigo <denis2295@gmail.com>
+Date:   Tue Mar 7 19:26:27 2023 +0100
+
+    feat: update to Angular 14 (#5973)
+    
+    * fix: fix issues after updates to Angular 13 in rooms component and country orders component
+    
+    * feat: update to Angular 14 (#1)
+    
+    * fix(angular 13): fix issues after updates to Angular 13 in rooms component and country orders component (#5965)
+    
+    * feat: update to Angular 14
+    
+    * feat: update angular eslint packages eslint
+    
+    * feat: update nebular to 10 version
+    
+    * feat: update style import, remove ~
+
+[33mcommit 384b841cc06278b59daaae2a23559eb998b51c1b[m
+Author: Denis Strigo <denis2295@gmail.com>
+Date:   Thu Feb 9 17:00:28 2023 +0100
+
+    fix(angular 13): fix issues after updates to Angular 13 in rooms component and country orders component (#5965)
+
+[33mcommit 0ea69519c04efe286268b79abb59cfcff3c38045[m
+Author: Denis Strigo <denis2295@gmail.com>
+Date:   Mon Jan 9 19:03:29 2023 +0300
+
+    release: 9.0.0 (#5958)
+    
+    * release: 9.0.0
+    
+    * release: 9.0.0, update angular version in README
+
+[33mcommit ec68f5e84a94e08e2253ca3ba46043b3305add9e[m
+Author: Denis Strigo <denis2295@gmail.com>
+Date:   Thu Dec 29 13:12:53 2022 +0300
+
+    feat: update to Angular 13, move from tslint to eslint (#5957)
+    
+    * feat: update to Angular 13
+    
+    * feat: update to Angular 13, move from tslint to eslint
+
+[33mcommit fd957694783a23905f7e31c91302575c31e36529[m
+Author: Evgeny Lupanov <e.lupanov@akveo.com>
+Date:   Fri May 20 14:39:06 2022 +0300
+
+    feat: add installation notes
+
+[33mcommit 2588f30d109cecc778d9d8036f381784a5eb9a6c[m
+Author: Max <coding@maax.gr>
+Date:   Fri May 20 11:09:49 2022 +0200
+
+    typescript ~4.2 or ~4.3 version (#5894)
+
+[33mcommit fbab9e521426afc9480d2b64a9ab3364e21dc664[m
+Author: Max <coding@maax.gr>
+Date:   Fri May 20 11:06:43 2022 +0200
+
+    lock ng2-ckeditor and @types/jasmine minor versions (#5898)
+
+[33mcommit 0f4156d7837dcb27e15a17b0d6eface0a979bf9b[m
+Author: Max <coding@maax.gr>
+Date:   Fri May 20 10:52:10 2022 +0200
+
+    remove @akveo/ng2-completer and ng2-completer (#5896)
+
+[33mcommit f1365e18103e0acf1d45161ec5bbf888216efca4[m
+Author: Kate <43079840+katebatura@users.noreply.github.com>
+Date:   Thu May 12 12:23:55 2022 +0200
+
+    fix: update dependencies (#5938)
+    
+    fix for 5930 issue
+
+[33mcommit 237ea6bc692bbf02a44a10b0b69e86e630665d3b[m
+Author: Kate <43079840+katebatura@users.noreply.github.com>
+Date:   Wed May 11 15:34:11 2022 +0200
+
+    feat: update dependencies (#5937)
+
+[33mcommit f5015ac0d77efe579191f2d440417581eb93c58e[m
+Author: Evgeny Lupanov <e.lupanov@akveo.com>
+Date:   Wed Apr 27 15:39:08 2022 +0300
+
+    feat: update README.md
+
+[33mcommit 570031d2befc5d1de5133401bfc48fe237c88458[m
+Author: Evgeny Lupanov <elupanov@users.noreply.github.com>
+Date:   Wed Jan 26 14:48:35 2022 +0300
+
+    feat: update templates section in README
+
+[33mcommit 0e0caa1ea68ce356a8d3d54c124b8ba112aa1290[m
+Aut
