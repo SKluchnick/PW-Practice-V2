@@ -4,12 +4,12 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
-test.describe("Form Layouts page", () => {
+test.describe("Form Layouts page => Radio buttons", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
   });
-  test("radioButtons", async ({ page }) => {
+  test("Radio buttons", async ({ page }) => {
     const usingTheGridForm = page.locator("nb-card", {
       hasText: "Using the Grid",
     });
@@ -48,3 +48,30 @@ test.describe("Form Layouts page", () => {
     ).toBeTruthy();
   });
 });
+
+
+test.describe("Form Layouts page => Radio buttons two", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.getByText("Forms").click();
+    await page.getByText("Form Layouts").click();
+  });
+  test("Radio buttons two", async ({ page }) => {
+    const usingTheGridForm = page.locator("nb-card", {
+      hasText: "Using the Grid",
+    });
+    await usingTheGridForm.getByLabel("Option 2").check({ force: true });
+
+    const radioStatus = await usingTheGridForm.getByLabel("Option 2").isChecked();
+
+    expect (radioStatus).toBeTruthy()
+
+    await expect(usingTheGridForm.getByLabel("Option 2")).toBeChecked()
+
+    await usingTheGridForm.getByLabel("Option 1").check({ force: true });
+
+    expect (await usingTheGridForm.getByLabel("Option 2").isChecked()).toBeFalsy() 
+    expect (await usingTheGridForm.getByLabel("Option 1").isChecked()).toBeTruthy() 
+
+    });
+});
+
