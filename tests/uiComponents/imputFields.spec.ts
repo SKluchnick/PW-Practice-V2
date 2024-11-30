@@ -4,7 +4,7 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
-test.describe("Form Layouts page", () => {
+test.describe("Form Layouts page => Input fields", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
@@ -29,7 +29,7 @@ test.describe("Form Layouts page", () => {
 });
 
 
-test.describe("Form Layouts page two", () => {
+test.describe("Form Layouts page two => Input fields two", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
@@ -54,7 +54,7 @@ test.describe("Form Layouts page two", () => {
 });
 
 
-test.describe("Form Layouts page three", () => {
+test.describe("Form Layouts page three => Input fields three", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
@@ -79,7 +79,7 @@ test.describe("Form Layouts page three", () => {
 });
 
 
-test.describe("Form Layouts page four", () => {
+test.describe("Form Layouts page four => Input fields four", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
