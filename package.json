@@ -9,9 +9,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "Radio-buttons-pw":"npx playwright test radioButtons.spec.ts --project=chromium "
+    "Radio-buttons-pw":"npx playwright test radioButtons.spec.ts --project=chromium"
   },
-  "dependencies": {
+    "dependencies": {
     "@angular/animations": "^14.2.12",
     "@angular/cdk": "12.1.0",
     "@angular/common": "^14.2.12",
