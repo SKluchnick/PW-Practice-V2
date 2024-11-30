@@ -4,12 +4,12 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
-test.describe("Form Layouts page => Radio buttons", () => {
+test.describe("Form Layouts page => Radio button", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
   });
-  test("Radio buttons", async ({ page }) => {
+  test("Radio button", async ({ page }) => {
     const usingTheGridForm = page.locator("nb-card", {
       hasText: "Using the Grid",
     });
@@ -50,7 +50,7 @@ test.describe("Form Layouts page => Radio buttons", () => {
 });
 
 
-test.describe("Form Layouts page => Radio buttons two", () => {
+test.describe("Form Layouts page => Radio button two", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText("Forms").click();
     await page.getByText("Form Layouts").click();
