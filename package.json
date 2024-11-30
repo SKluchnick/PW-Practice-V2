@@ -9,7 +9,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "Input-fields-pw":"npx playwright test imputFields.spec.ts --project=chromium ",
     "Radio-buttons-pw":"npx playwright test radioButtons.spec.ts --project=chromium "
   },
   "dependencies": {
