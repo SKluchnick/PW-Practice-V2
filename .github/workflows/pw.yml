@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps --force
     - name: Run Playwright tests
-      run: npm run Radio-buttons-pw && npm run Input-fields-pw
+      run: npm run CheckBoxes-pw
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

@@ -4,12 +4,12 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
-test.describe("Form Modal & Overlays", () => {
+test.describe("Form Modal & Overlays => Checkboxe", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText('Modal & Overlays').click()
     await page.getByText('Toastr').click()
   });
-  test('checkboxes', async({page}) => {
+  test('Checkboxe', async({page}) => {
   
     await page.getByRole('checkbox', {name: "Hide on click"}).uncheck({force: true})
     const box = await page.getByRole("checkbox", { name: "Hide on click" });
@@ -28,6 +28,27 @@ test.describe("Form Modal & Overlays", () => {
     
 })
 });
+
+test.describe("Form Modal & Overlays => Checkboxe two", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.getByText('Modal & Overlays').click()
+    await page.getByText('Toastr').click()
+  });
+  test('Checkboxe', async({page}) => {
+  
+    await page.getByLabel("Hide on click").uncheck({ force: true })
+    await page.getByLabel("Prevent arising of duplicate toast").check({ force: true })
+    const allCheckBoxes = page.getByRole('checkbox')
+    for(const box of await allCheckBoxes.all()){
+      await box.check({force:true})
+      expect(await box.isChecked()).toBeTruthy()
+    }
+    
+})
+});
+
+
+
 
 // 1. 
 // const allBoxes = this.page.getByRole('checkbox'); - цей рядок оголошує константу allBoxes,
