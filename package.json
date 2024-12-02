@@ -11,7 +11,9 @@
     "start": "ng serve",
     "Radio-buttons-pw":"npx playwright test radioButtons.spec.ts --project=chromium",
     "Input-fields-pw":"npx playwright test inputFields.spec.ts --project=chromium",
-    "CheckBoxes-pw": "npx playwright test checkBoxes.spec.ts --project=chromium"
+    "CheckBoxes-pw": "npx playwright test checkBoxes.spec.ts --project=chromium",
+    "ListsDropdowns-pw": "npx playwright test listsDropdowns.spec.ts --project=chromium"
+                           
   },
     "dependencies": {
     "@angular/animations": "^14.2.12",

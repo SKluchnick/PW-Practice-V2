@@ -4,7 +4,7 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
-test.describe("listsAndDropdowns", () => {
+test.describe("listsAndDropdowns => lists and dropdowns", () => {
   test("lists and dropdowns", async ({ page }) => {
     const dropDownMenu = page.locator("ngx-header nb-select");
     await dropDownMenu.click();
@@ -40,13 +40,93 @@ test.describe("listsAndDropdowns", () => {
   });
 });
 
+test.describe("listsAndDropdowns => lists and dropdowns two", () => {
+  test("lists and dropdowns two", async ({ page }) => {
+    const dropDownMenu = page.locator("ngx-header nb-select");
+    await dropDownMenu.click();
+
+    // page.getByRole("list"); //when the list has a UL tag
+    // page.getByRole("listitem"); //when the list has LI tag
+
+    // const optionList = page.getByRole("list").locator("nb-option");
+    // console.log(optionList)
+
+    const optionListOne = page.getByRole("list").locator("nb-option");
+    const count = await optionListOne.count();
+
+    for (let i = 0; i < count; i++) {
+      const optionText = await optionListOne.nth(i).innerText();
+      console.log(`Option ${i + 1}: ${optionText}`);
+    }
+
+    const optionListTwo = await page
+      .getByRole("list")
+      .locator("nb-option")
+      .evaluateAll((options) => {
+        return options.map((option) => option.textContent);
+      });
+
+    console.log(optionListTwo);
+
+    // /array/
+    const optionListThree = await page
+    .getByRole('list')
+    .locator('nb-option');
+    
+    const texts = await optionListThree.allTextContents();
+    console.log(texts);
+    
+    for (let i = 0; i < texts.length; i++) {
+    if (texts[i].includes('Dark')) {
+    await optionListThree.nth(i).click();
+    break; 
+    }
+    }
+    
+    // const optionListFour = page.locator("nb-option-list nb-option");
+    // await expect(optionListFour).toHaveText([
+    //   "Light",
+    //   "Dark",
+    //   "Cosmic",
+    //   "Corporate",
+    // ]);
+    // await optionListFour.filter({ hasText: "Cosmic" }).click();
+    // const header = page.locator("nb-layout-header");
+    // await expect(header).toHaveCSS("background-color", "rgb(50, 50, 89)");
+
+    // const colors = {
+    //   Light: "rgb(255, 255, 255)",
+    //   Dark: "rgb(34, 43, 69)",
+    //   Cosmic: "rgb(50, 50, 89)",
+    //   Corporate: "rgb(255, 255, 255)",
+    // };
+
+    // await dropDownMenu.click();
+    // for (const color in colors) {
+    //   await optionList.filter({ hasText: color }).click();
+    //   await expect(header).toHaveCSS("background-color", colors[color]);
+    //   if (color != "Corporate") await dropDownMenu.click();
+    // }
+  });
+});
 
 
 
 
-// Конечно, вот объяснение кода на русском под каждой строчкой:
 
-// test("test", async ({ page }) => { 
+
+
+
+
+
+
+
+
+
+
+
+
+// test("test", async ({ page }) => {
 // Описываем тест с именем "test" и делаем его асинхронным, передавая объект page
 
 // const res = page.locator("ngx-header nb-select");
@@ -81,3 +161,41 @@ test.describe("listsAndDropdowns", () => {
 // );
 // Ожидаем выполнения всех промисов, созданных в map
 // });
+
+
+// optionListFour не является массивом. Это локатор Playwright,
+//  который представляет собой набор элементов, соответствующих 
+//  селектору "nb-option-list nb-option". Локаторы в Playwright 
+//  позволяют вам взаимодействовать с элементами на странице, 
+//  но они не являются массивами в традиционном смысле.
+
+// Когда вы используете метод toHaveText с локатором, 
+// Playwright проверяет, что текстовое содержимое всех 
+// элементов, найденных этим локатором, соответствует 
+// ожидаемым значениям. В данном случае, optionListFour
+//  проверяется на наличие текстов "Light", "Dark", "Cosmic" и "Corporate".
+
+// const optionListFour = page.locator("nb-option-list nb-option");
+// await expect(optionListFour).toHaveText([
+//   "Light",
+//   "Dark",
+//   "Cosmic",
+//   "Corporate",
+// ]);
+// await optionListFour.filter({ hasText: "Cosmic" }).click();
+
+
+// метод nth(i) относится к методам Playwright.
+//  Он используется для выбора элемента с определенным индексом из набора элементов,
+//  найденных локатором. Вот как это работает:
+
+// •  locator.nth(i): Этот метод возвращает новый локатор, 
+// который указывает на элемент с индексом i в наборе элементов,
+//  найденных исходным локатором. Индексация начинается с 0, 
+//  поэтому nth(0) выбирает первый элемент, nth(1) — второй и так далее.
+
+// Пример использования:
+
+// const optionList = page.locator('nb-option');
+// const secondOption = optionList.nth(1); // Выбирает второй элемент из набора
+// await secondOption.click(); // Выполняет клик по второму элементу
