@@ -4,13 +4,34 @@ test.beforeEach("start beforeEach test", async ({ page }) => {
   await page.goto("http://localhost:4200/");
 });
 
-test.describe("DialogBoxes", () => {
+test.describe("DialogBoxes => dialogBoxes", () => {
   test.beforeEach(async ({ page }) => {
     await page.getByText('Tables & Data').click()
     await page.getByText('Smart Table').click()
   });
 
   test("dialogBoxes", async ({ page }) => {
+   
+    page.on('dialog', dialog => {
+        expect(dialog.message()).toEqual('Are you sure you want to delete?')
+        dialog.accept()
+    })
+
+    await page.getByRole('table').locator('tr', {hasText: "mdo@gmail.com"}).locator('.nb-trash').click()
+    await expect(page.locator('table tr').first()).not.toHaveText('mdo@gmail.com')
+    await expect(page.locator('table tr').nth(4)).toHaveText('mdo@gmail.com');
+  });
+});
+
+// ? **********************************************************************************************
+
+test.describe("DialogBoxes => dialogBoxes two", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.getByText('Tables & Data').click()
+    await page.getByText('Smart Table').click()
+  });
+
+  test("dialogBoxes two", async ({ page }) => {
    
     page.on('dialog', dialog => {
         expect(dialog.message()).toEqual('Are you sure you want to delete?')
