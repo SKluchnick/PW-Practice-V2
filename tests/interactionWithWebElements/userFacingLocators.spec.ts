@@ -21,3 +21,30 @@ test("UserFacingLocators.spec", async ({ page }) => {
   await page.getByTitle("IoT Dashboard").click();
   await page.getByTitle("Forms").click();
 });
+
+
+// ? ******************************************************************************************************
+
+
+test("UserFacingLocators.spec => two", async ({ page }) => {
+  await page.getByRole("textbox", { name: "Email" }).first().fill("one");
+  await page.locator('input[id=exampleInputEmail1][placeholder="Email"]').fill("two");
+  await page.getByRole("button", { name: "Sign in" }).nth(1).click();
+  await page.locator('button[type="submit"][class="appearance-filled size-medium shape-rectangle status-danger nb-transition"]:text-is("Submit")').click();
+
+  await page.getByLabel("Email").first().fill("AAA");
+  await page.getByLabel("Email").nth(2).fill("nth(2)");
+  await page.getByLabel('Email', { exact: true }).first().fill('BBB');
+  await page.getByLabel("Password").first().fill("BBB");
+
+  await page.getByPlaceholder("Jane Doe").fill('Jane Doe');
+
+  await page.getByText("Using the Grid").click();
+
+  await page.getByTitle("IoT Dashboard").click();
+
+  await page.locator('a[title="IoT Dashboard"]').click();
+    
+      
+  
+});

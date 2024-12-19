@@ -46,3 +46,41 @@ test("parentElements", async ({ page }) => {
     .getByRole("textbox", { name: "Email" })
     .click();
 });
+
+// ? ******************************************************************************************************
+
+test("parentElements => two", async ({ page }) => {
+  
+
+// await page
+// .locator("nb-card", { hasText: "Block form" })
+// .getByRole("textbox", { name: "Email" })
+// .fill("Email");
+
+// await page
+// .locator("nb-card", { has: page.locator("#inputEmail") })
+// .getByRole("textbox", { name: "First Name" })
+// .fill("First Name");
+ 
+// await page
+// .locator("nb-card")
+// .filter({ hasText: "Form without labels" })
+// .getByRole("textbox", { name: "Recipients" })
+// .fill("Recipients");
+
+// await page
+// .locator("nb-card")
+// .filter({ has: page.locator('[class="status-success appearance-filled size-medium shape-rectangle nb-transition"]') })
+// .getByRole("textbox", { name: "Subject" })
+// .fill("Subject");
+
+
+await page
+.locator("nb-card")
+.filter({ has: page.locator("nb-checkbox") })
+.filter({ hasText: "Submit" })
+.filter({ hasText: "Email address" })
+.getByRole("textbox", { name: "Email" })
+.fill("Email");
+    
+});
